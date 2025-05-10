@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운영위원회 회의 대시보드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #3b5998;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            margin-bottom: 10px;
+        }
+        
+        .date-info {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .summary-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .card-number {
+            background-color: #3b5998;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        
+        .card-status {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .status-pending {
+            background-color: #ffd700;
+            color: #333;
+        }
+        
+        .status-completed {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .status-in-progress {
+            background-color: #2196f3;
+            color: white;
+        }
+        
+        .card-content {
+            flex-grow: 1;
+        }
+        
+        .content-item {
+            margin-bottom: 10px;
+        }
+        
+        .content-label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .content-text {
+            text-align: justify;
+        }
+        
+        .upcoming-events {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .events-header {
+            color: #3b5998;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .event-item {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .event-date {
+            background-color: #e4e9f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-right: 15px;
+            text-align: center;
+            width: 100px;
+            font-weight: bold;
+        }
+        
+        .event-info {
+            flex-grow: 1;
+        }
+        
+        .event-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #3b5998;
+            color: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2025년 5월 운영위원회 회의 대시보드</h1>
+            <p>주요 논의 사항 및 해결 방안 요약</p>
+        </div>
+        
+        <div class="date-info">
+            <h3>회의 일자: 2025년 5월 2일</h3>
+        </div>
+        
+        <div class="dashboard">
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">1</div>
+                    <div class="card-title">근무 형태 변경</div>
+                    <div class="card-status status-pending">답변 대기중</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">주요 논의:</div>
+                        <div class="content-text">물류실장은 비용 및 고용 유연성 문제로 조근 근무자의 야간 근무 전환에 부정적인 입장을 보였습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">노조의 주장:</div>
+                        <div class="content-text">근무 형태 변경은 근로 시간 증가가 아닌 동일한 8시간 근무이며, 경영진의 의지 문제라고 주장했습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">해결 방안:</div>
+                        <div class="content-text">5월 15일까지 답변을 요청했으며, 미응답 시 처장 및 이사장 면담을 진행할 예정입니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">2</div>
+                    <div class="card-title">명절 보로금 및 주휴수당 문제</div>
+                    <div class="card-status status-completed">합의 완료</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">주요 진전:</div>
+                        <div class="content-text">명절 보로금이 통상임금에 산입되어 6월 말 전 지급이 결정되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">주휴수당 문제:</div>
+                        <div class="content-text">통상임금 증가에 따른 주휴수당 인상이 필요하나, 연차나 병가 사용 시 주휴수당 삭감 우려가 있습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">예상 금액:</div>
+                        <div class="content-text">주휴수당 인상 시 주휴일 1일당 3천 원 정도.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">3</div>
+                    <div class="card-title">연차 수당 산정 방식</div>
+                    <div class="card-status status-in-progress">자문 예정</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">현황:</div>
+                        <div class="content-text">연차 수당 산정 방식에 대한 문제가 제기되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">해결 방안:</div>
+                        <div class="content-text">민주노총을 통해 노무사나 법무사를 소개받아 자문을 구할 예정입니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">4</div>
+                    <div class="card-title">노조 사무실 확보 문제</div>
+                    <div class="card-status status-in-progress">진행 중</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">현황:</div>
+                        <div class="content-text">성남 지부는 조합원 수가 20%를 넘어 지부 사무실을 요구할 수 있게 되었으나, 타 노조와 공동 사용해야 하는 문제가 있습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">본조 사무실:</div>
+                        <div class="content-text">현재 규정(전국 5개 광역시 2개 이상 지부 보유)에 해당되지 않아 확보하지 못하고 있으며, 공정 대표 의무 위반 주장을 제기하고 있습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">해결 방안:</div>
+                        <div class="content-text">성남 지부는 우선 공동 사용하더라도 사무실을 받기로 결정했으며, 향후 단체협약에 노조 사무실 지급 규정을 명문화하도록 요구할 예정입니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">5</div>
+                    <div class="card-title">물류 노동자 분리 교섭 주장</div>
+                    <div class="card-status status-pending">검토 중</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">제안 내용:</div>
+                        <div class="content-text">물류 노동자가 운송 중심 노조와 분리하여 독자적인 교섭권을 주장할 필요성이 제기되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">어려움:</div>
+                        <div class="content-text">동일 사업장 내에서는 성격이 명확히 다른 경우가 아니면 분리 교섭이 인정받기 어렵고, 현재 교대 노조가 물류 노동자 중 과반수를 차지하고 있습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">향후 계획:</div>
+                        <div class="content-text">워크숍에서 심도 있게 논의하고, 오상현 위원장에게 자문을 구할 예정입니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">6</div>
+                    <div class="card-title">조합원 감동 및 참여 유도 방안</div>
+                    <div class="card-status status-in-progress">검토 중</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">제안 활동:</div>
+                        <div class="content-text">월별 생일인 조합원을 위한 작은 파티, 케이크 제공, 하절기 음료수, 아이스크림, 휴게실 커피/차 제공 등이 제안되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">논의 내용:</div>
+                        <div class="content-text">이미 상품권 지급 등 생일 지원을 하는 지부가 있으며, 조합원들이 공개적 축하를 부끄러워하는 경우도 있습니다. 작은 것이라도 꾸준히 제공하여 노조 활동을 보여주는 것이 중요합니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">향후 계획:</div>
+                        <div class="content-text">지부장들이 제안된 아이디어를 참고하여 검토하기로 했습니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">7</div>
+                    <div class="card-title">알바 근무 시간 문제</div>
+                    <div class="card-status status-pending">문제 제기</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">문제점:</div>
+                        <div class="content-text">부평 지부에서 알바 근무자의 퇴근 시간을 물량이 없다는 이유로 임의로 앞당겨 퇴근시키는 관행이 문제로 지적되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">우려사항:</div>
+                        <div class="content-text">일일 계약서에 명시된 근무 시간을 지키지 않는 것은 계약 위반 소지가 있으며, 교통 문제 등으로 일부 근로자는 퇴사하기도 했습니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">8</div>
+                    <div class="card-title">공무직 노조 임금협상 및 소송</div>
+                    <div class="card-status status-in-progress">진행 중</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">임금 협상:</div>
+                        <div class="content-text">현재 진전이 없는 상태입니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">근속 기간 인정 소송:</div>
+                        <div class="content-text">4월 1일 1차 변론 이후, 변호사의 준비 미흡으로 6월 10일 2차 변론이 예정되어 있습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">대응 계획:</div>
+                        <div class="content-text">회사가 다르다는 사측 주장에 반박 서면을 준비하고, 다른 지부에서 근속 인정을 받은 사례를 증거로 활용할 예정입니다.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="card-header">
+                    <div class="card-number">9</div>
+                    <div class="card-title">간부 회의 방식 개선</div>
+                    <div class="card-status status-pending">제안됨</div>
+                </div>
+                <div class="card-content">
+                    <div class="content-item">
+                        <div class="content-label">제안 내용:</div>
+                        <div class="content-text">본부 간부들이 직책에 맞는 안건이나 소속 지부 관련 안건을 한 가지씩 준비하여 발표하는 방식이 제안되었습니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">목적:</div>
+                        <div class="content-text">회의 참여도를 높이고 실질적인 논의를 이끌어내기 위함입니다.</div>
+                    </div>
+                    <div class="content-item">
+                        <div class="content-label">적용 시점:</div>
+                        <div class="content-text">차차기 회의부터 적용할 것을 권장했습니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="upcoming-events">
+            <h2 class="events-header">주요 일정</h2>
+            
+            <div class="event-item">
+                <div class="event-date">5월 15일</div>
+                <div class="event-info">
+                    <div class="event-title">비정규직 근무 형태 변경 답변 마감일</div>
+                    <div class="event-description">홍석민 위원장이 제시한 마감일로, 이후 답변이 없을 경우 처장 및 이사장 면담 진행 예정</div>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">5월 말</div>
+                <div class="event-info">
+                    <div class="event-title">워크숍 참석 인원 확정</div>
+                    <div class="event-description">운영위원 및 참석 가능한 대의원 인원 파악</div>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">6월 10일</div>
+                <div class="event-info">
+                    <div class="event-title">근속 기간 인정 소송 2차 변론</div>
+                    <div class="event-description">회사가 다르다는 사측 주장에 대한 반박 서면 준비</div>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">6월 13일</div>
+                <div class="event-info">
+                    <div class="event-title">운영위원회 워크숍</div>
+                    <div class="event-description">오후 3시, 골드밸류 펜션에서 개최 예정 (운영위원회의, 초청 강사 강연, 화합의 장)</div>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">6월 말</div>
+                <div class="event-info">
+                    <div class="event-title">명절 보로금 통상임금 산입 지급</div>
+                    <div class="event-description">연합노조와의 공동 대응 결과에 따른 지급 예정</div>
+                </div>
+            </div>
+            
+            <div class="event-item">
+                <div class="event-date">6월 말</div>
+                <div class="event-info">
+                    <div class="event-title">공무직 노조 지부 간부 워크숍</div>
+                    <div class="event-description">중앙 우체국에서 당일로 진행 예정</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 물류노조 운영위원회</p>
+        </div>
+    </div>
+</body>
+</html>
