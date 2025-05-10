@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물류노조 운영위원회의</title>
+    <link rel="stylesheet" href="20250502_issuetracking.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>운영위원회 주요 안건</h1>
+            <p class="meeting-date">회의일: 2025년 5월 2일</p>
+        </header>
+
+        <div id="issue-board" class="issue-board">
+            <!-- Issues will be dynamically inserted here by JavaScript -->
+        </div>
+
+        <footer>
+            <p>&copy; 물류노조 운영위원회</p>
+        </footer>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="issueModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalDetails" class="modal-details-content"></div>
+        </div>
+    </div>
+
+    <script src="20250502_issuetracking.js"></script>
+</body>
+</html>

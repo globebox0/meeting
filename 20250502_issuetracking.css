@@ -1,0 +1,332 @@
+body {
+    font-family: 'Noto Sans KR', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* 기본 배경: 흰색 */
+    color: #311B14; /* Dark Cocoa - 주요 텍스트 */
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #E0E0E0; /* 밝은 회색 경계선 */
+}
+
+header h1 {
+    color: #144DA8; /* Royal Blue - 헤더 제목 */
+    margin-bottom: 8px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.meeting-date {
+    font-size: 1em;
+    color: #555555; /* 회색 계열 보조 텍스트 */
+}
+
+.issue-board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.issue-card {
+    background-color: #FFFFFF; /* 카드 배경: 흰색 */
+    border: 1px solid #E0E0E0; /* 카드 테두리: 밝은 회색 */
+    border-left: 6px solid #B0BEC5; /* 기본 왼쪽 테두리: 중간 회색톤 (우선순위에 따라 변경됨) */
+    border-radius: 10px;
+    padding: 25px;
+    width: calc(33.333% - 25px);
+    min-width: 320px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 그림자 연하게 */
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.issue-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+}
+
+.issue-card .title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.issue-card .title-container .icon {
+    font-size: 1.5em;
+    margin-right: 12px;
+    line-height: 1;
+    color: #144DA8; /* 아이콘 색상: Royal Blue */
+}
+
+.issue-card h2 {
+    font-size: 1.5em;
+    color: #311B14; /* Dark Cocoa - 카드 제목 */
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.issue-card .description {
+    font-size: 0.95em;
+    color: #4A2A23; /* Dark Cocoa 계열 약간 밝게 - 카드 설명 */
+    margin-bottom: 18px;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 100px;
+}
+
+.issue-card .details {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px dashed #E0E0E0; /* 밝은 회색 점선 */
+    font-size: 0.9em;
+}
+
+.issue-card .details span {
+    display: inline-block;
+    margin-right: 12px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Priority-specific styling */
+.priority-high {
+    border-left-color: #600C0C !important; /* Deep Crimson */
+}
+.priority-high .priority {
+    background-color: #F8D7DA;
+    color: #600C0C;
+}
+.priority-high .icon {
+    color: #600C0C !important; /* High 우선순위 아이콘 색상도 변경 */
+}
+
+
+.priority-medium {
+    border-left-color: #144DA8 !important; /* Royal Blue */
+}
+.priority-medium .priority {
+    background-color: #D1E9FC; /* 연한 파랑 */
+    color: #0D6EFD; /* 파랑 텍스트 */
+}
+.priority-medium .icon {
+    color: #144DA8 !important;
+}
+
+.priority-low {
+    border-left-color: #A2D5F2 !important; /* 부드러운 하늘색 */
+}
+.priority-low .priority {
+    background-color: #E0F2F7; /* 더 연한 하늘색 */
+    color: #087099; /* 하늘색 텍스트 */
+}
+.priority-low .icon {
+    color: #087099 !important;
+}
+
+
+/* Status-specific styling */
+.status-결정됨 {
+    background-color: #E8F5E9; /* 연한 녹색 */
+    color: #1E8E3E; /* 녹색 텍스트 */
+}
+.status-진행-중 {
+    background-color: #FFF3CD; /* 연한 노랑 (기존 크림색 계열 유지) */
+    color: #664D03; /* 노랑/갈색 텍스트 */
+}
+.status-향후-논의 {
+    background-color: #F1F3F4; /* 연한 회색 */
+    color: #5F6368; /* 회색 텍스트 */
+}
+
+.due-date {
+    background-color: #F8F9FA; /* 매우 연한 회색 */
+    color: #495057; /* 회색 텍스트 */
+}
+.due-date.overdue {
+    background-color: #F8D7DA;
+    color: #600C0C;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid #E0E0E0; /* 밝은 회색 경계선 */
+    font-size: 0.95em;
+    color: #555555; /* 회색 계열 */
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
+}
+
+.modal-content {
+    background-color: #FFFFFF; /* 모달 배경: 흰색 */
+    margin: 5% auto; /* 모바일 우선 상단 마진 */
+    padding: 20px;
+    border: 1px solid #D1D1D1; /* 약간 어두운 회색 테두리 */
+    width: 80%;
+    max-width: 500px; /* 모바일 우선 최대 너비 */
+    border-radius: 10px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* 그림자 */
+    position: relative;
+}
+
+.close-button {
+    color: #600C0C; /* Deep Crimson - 닫기 버튼 색상 */
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    line-height: 1;
+    z-index: 10;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #311B14; /* Dark Cocoa - 호버 시 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 { /* 모달 제목 */
+    margin-top: 0;
+    color: #144DA8; /* Royal Blue */
+    border-bottom: 1px solid #E0E0E0; /* 밝은 회색 경계선 */
+    padding-bottom: 10px; /* 모바일용 패딩 */
+    font-size: 1.2em; /* 모바일용 글꼴 크기 (기존 1.5em 에서 약간 줄임) */
+    font-weight: 500;
+    display: flex; /* 아이콘과 제목 정렬 위해 */
+    align-items: center; /* 아이콘과 제목 정렬 위해 */
+}
+.modal-content h2 .icon { /* 모달 제목 아이콘 */
+    font-size: 1em; /* 제목 글꼴 크기에 맞춰 조정 */
+    margin-right: 10px;
+    color: inherit; /* 제목 색상 따름 */
+}
+
+
+.modal-details-content {
+    max-height: 65vh;
+    overflow-y: auto;
+    font-size: 0.95em; /* 모바일 가독성 고려 */
+    line-height: 1.8;
+    white-space: pre-wrap;
+    color: #311B14; /* Dark Cocoa */
+    padding-right: 10px; /* 스크롤바 공간 */
+}
+.modal-details-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-details-content::-webkit-scrollbar-track {
+    background: #F1F1F1;
+    border-radius: 10px;
+}
+.modal-details-content::-webkit-scrollbar-thumb {
+    background: #C1C1C1;
+    border-radius: 10px;
+}
+.modal-details-content::-webkit-scrollbar-thumb:hover {
+    background: #A8A8A8;
+}
+
+
+/* Responsive adjustments */
+@media (min-width: 769px) { /* PC 환경 스타일 */
+    header h1 {
+        font-size: 2.5em;
+    }
+    .issue-card {
+        padding: 30px;
+    }
+    .issue-card h2 {
+        font-size: 1.4em;
+    }
+    .issue-card .description {
+        font-size: 1em;
+    }
+     .issue-card .title-container .icon {
+        font-size: 1.4em;
+    }
+
+    .modal-content {
+        margin: 8% auto;
+        padding: 30px;
+        width: 75%;
+        max-width: 850px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5em; /* PC용 모달 제목 크기 */
+        padding-bottom: 15px;
+    }
+     .modal-content h2 .icon {
+        font-size: 1em;
+    }
+
+
+    .close-button {
+        font-size: 32px;
+        top: 15px;
+        right: 25px;
+    }
+    .modal-details-content {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 769px) {
+    .container {
+        padding: 15px; /* 이전 단계에서 수정했던 값, 필요시 더 늘려볼 수 있음 (예: 20px) */
+    }
+
+    .issue-board {
+        /* .issue-board 자체에 패딩을 주어 카드와의 간격을 확보할 수 있습니다. */
+        /* padding-left: 5px; */ /* 아주 작은 값부터 테스트 */
+        /* padding-right: 5px; */
+        gap: 15px;
+        /* 만약 .issue-board가 flex-wrap: wrap 상태이고, 카드들이 100% 너비라면
+           이 요소의 좌우 패딩은 크게 의미가 없을 수 있습니다.
+           오히려 .container의 패딩이 중요합니다. */
+    }
+
+    .issue-card {
+        width: 100%;
+        min-width: unset;
+        padding: 20px; /* 카드 내부 패딩 */
+        /* box-sizing: border-box; /* 이전 단계에서 추가했는지 확인 */
+
+        /* 왼쪽 테두리가 잘린다면, 카드 자체에 아주 작은 왼쪽 마진을 주거나,
+           부모 요소의 패딩을 확실히 하는 것이 좋습니다.
+           음수 마진은 피하는 것이 좋습니다. */
+        /* margin-left: 1px; */ /* 이 방법은 최후의 수단으로, 근본 원인 파악이 우선 */
+    }
+}
