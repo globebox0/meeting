@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #005A9C; /* 노조 대표색 (예: 파란색 계열) */
+    --secondary-color: #FFD700; /* 강조색 (예: 노란색 계열) */
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --header-text-color: #ffffff;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --status-pending: #FF9800; /* 주황 */
+    --status-ongoing: #2196F3; /* 파랑 */
+    --status-resolved: #4CAF50; /* 초록 */
+    --status-monitoring: #795548; /* 갈색 */
+    --status-upcoming: #9C27B0; /* 보라 */
+    --status-discussion: #607D8B; /* 회색 */
+    --status-mixed: #FFC107;    /* 밝은 주황 */
+    --status-urgent: #f44336;   /* 빨강 */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), #007bff);
+    color: var(--header-text-color);
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+header h1 i {
+    margin-right: 10px;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+.card-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin: 0;
+    font-weight: 500;
+}
+.card-header h2 i {
+    margin-right: 8px;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1; /* 카드의 높이를 동일하게 만드는데 도움 */
+}
+
+.card-body p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.card-body p:last-child {
+    margin-bottom: 0;
+}
+
+.card-body strong {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.status.pending { background-color: var(--status-pending); }
+.status.ongoing { background-color: var(--status-ongoing); }
+.status.resolved { background-color: var(--status-resolved); }
+.status.monitoring { background-color: var(--status-monitoring); }
+.status.upcoming { background-color: var(--status-upcoming); }
+.status.discussion { background-color: var(--status-discussion); }
+.status.mixed { background-color: var(--status-mixed); }
+.status.urgent { background-color: var(--status-urgent); }
+
+
+/* 특정 카드 강조 (예: 이벤트, 법적 문제) */
+.card.event .card-header h2 { color: var(--status-upcoming); }
+.card.event .card-header h2 i { color: var(--status-upcoming); }
+.card.legal .card-header h2 { color: var(--status-ongoing); }
+.card.legal .card-header h2 i { color: var(--status-ongoing); }
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid var(--border-color);
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header .subtitle {
+        font-size: 1rem;
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* 모바일에서는 1열로 */
+    }
+    .card-header h2 {
+        font-size: 1.1rem;
+    }
+    .card-body p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0.5rem;
+    }
+    .dashboard-container {
+        padding: 10px;
+    }
+    header {
+        padding: 20px 15px;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-header .status {
+        margin-top: 8px;
+    }
+}
+
+/* 카드 클릭 시 간단한 애니메이션을 위한 JS 클래스 (선택 사항) */
+.card.clicked {
+    animation: cardClickEffect 0.3s ease-out;
+}
+
+@keyframes cardClickEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.97); }
+    100% { transform: scale(1); }
+}

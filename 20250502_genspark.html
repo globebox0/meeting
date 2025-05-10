@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운영위원회의 2025_05_02 회의록 요약</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css">
+    <style>
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .collapse-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .collapse-content.show {
+            max-height: 2000px;
+        }
+        .speaker-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .topic-card {
+            transition: all 0.3s ease;
+        }
+        .topic-card:hover {
+            transform: scale(1.02);
+        }
+        .speaker-filter {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .speaker-filter.active {
+            background-color: #4F46E5;
+            color: white;
+        }
+        .badge {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin-right: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .session-1 {
+            background-color: #EFF6FF;
+            border-left: 4px solid #3B82F6;
+        }
+        .session-2 {
+            background-color: #F0FDF4;
+            border-left: 4px solid #22C55E;
+        }
+        .meeting-time {
+            font-size: 0.8rem;
+            color: #6B7280;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="bg-white shadow-lg rounded-lg p-6 mb-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-800">운영위원회의 2025_05_02 회의록 요약</h1>
+                    <p class="text-gray-600 mt-2">2025년 5월 2일에 진행된 두 차례의 운영위원회 회의를 참석자별, 주제별로 요약 정리한 문서입니다.</p>
+                </div>
+                <div class="flex mt-4 md:mt-0">
+                    <span class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full mr-2">
+                        <i class="fas fa-clock mr-1"></i> 회의 1: 오후 3:43 (50분)
+                    </span>
+                    <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full">
+                        <i class="fas fa-clock mr-1"></i> 회의 2: 오후 4:40 (22분)
+                    </span>
+                </div>
+            </div>
+            <div class="mt-6">
+                <ul class="flex flex-wrap border-b">
+                    <li class="mr-1">
+                        <a class="tab-btn inline-block py-2 px-4 bg-white hover:bg-gray-200 font-semibold rounded-t-lg active" data-tab="overview">
+                            <i class="fas fa-home mr-1"></i> 개요
+                        </a>
+                    </li>
+                    <li class="mr-1">
+                        <a class="tab-btn inline-block py-2 px-4 bg-white hover:bg-gray-200 font-semibold rounded-t-lg" data-tab="by-topic">
+                            <i class="fas fa-list-ul mr-1"></i> 주제별
+                        </a>
+                    </li>
+                    <li class="mr-1">
+                        <a class="tab-btn inline-block py-2 px-4 bg-white hover:bg-gray-200 font-semibold rounded-t-lg" data-tab="by-speaker">
+                            <i class="fas fa-users mr-1"></i> 참석자별
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tab-btn inline-block py-2 px-4 bg-white hover:bg-gray-200 font-semibold rounded-t-lg" data-tab="timeline">
+                            <i class="fas fa-clock mr-1"></i> 타임라인
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">회의 요약</h2>
+                    <p class="text-gray-700 mb-4">2025년 5월 2일, 두 차례에 걸쳐 진행된 운영위원회 회의에서는 비정규직 근무형태, 정규직-비정규직 간 처우 차이, 명절 보로금 및 주휴수당 문제, 워크숍 일정, 조합원 소통 강화 방안, 물류노동자 분리교섭 등 다양한 주제가 논의되었습니다.</p>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">주요 결정사항</h3>
+                        <ul class="list-disc pl-6 text-gray-700">
+                            <li>물류 실장과 비정규직 근무형태 변경 관련 협의, 5월 15일까지 답변 요청</li>
+                            <li>워크숍 일정 6월 13일 15시, 골드 밸류 펜션에서 진행 확정</li>
+                            <li>워크숍 참석자 확정 필요 (5월 말까지)</li>
+                            <li>명절 보로금의 통상임금 반영 확인, 6월 말 전 지급 계획</li>
+                            <li>물류노동자 분리교섭 관련 워크숍에서 재논의 예정</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4">참석자 정보</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">심영훈</div>
+                            <div class="text-xs text-gray-500">주휴수당, 통상임금 법리</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">홍석민</div>
+                            <div class="text-xs text-gray-500">비정규직 처우개선, 워크숍</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">추교섭</div>
+                            <div class="text-xs text-gray-500">알바 근무현장, 조직 비판</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">장대석</div>
+                            <div class="text-xs text-gray-500">노조 조직률, 알바 업무분담</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">이도희</div>
+                            <div class="text-xs text-gray-500">신규 조합원 지원</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">송현동</div>
+                            <div class="text-xs text-gray-500">여성 근무환경</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">배정필</div>
+                            <div class="text-xs text-gray-500">임금협상, 근속소송</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">김영문</div>
+                            <div class="text-xs text-gray-500">워크숍 실무</div>
+                        </div>
+                        <div class="p-3 bg-gray-100 rounded-lg text-center">
+                            <div class="text-lg font-semibold text-gray-800">박희덕</div>
+                            <div class="text-xs text-gray-500">조합원 소통방안</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">주요 논의 주제</h3>
+                        <div class="flex flex-wrap">
+                            <span class="badge bg-blue-100 text-blue-800">비정규직 근무형태</span>
+                            <span class="badge bg-red-100 text-red-800">정규직-비정규직 처우 차이</span>
+                            <span class="badge bg-green-100 text-green-800">명절 보로금/주휴수당</span>
+                            <span class="badge bg-yellow-100 text-yellow-800">워크숍 일정</span>
+                            <span class="badge bg-purple-100 text-purple-800">조합원 소통</span>
+                            <span class="badge bg-indigo-100 text-indigo-800">물류노동자 분리교섭</span>
+                            <span class="badge bg-pink-100 text-pink-800">노조 사무실</span>
+                            <span class="badge bg-gray-100 text-gray-800">임금협상/근속인정</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">회의 타임라인</h2>
+                <div class="relative border-l-2 border-gray-300 ml-3">
+                    <!-- 첫 번째 회의 -->
+                    <div class="mb-6 ml-6">
+                        <div class="flex items-center mb-1">
+                            <div class="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-calendar-day text-white text-xs"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800">1차 회의 (오후 3:43 - 50분 33초)</h3>
+                        </div>
+                        <div class="session-1 p-4 rounded">
+                            <p class="text-gray-700">비정규직 근무형태, 정규직-비정규직 인사 및 처우 차이, 명절 보로금 및 주휴수당 반영 문제 등 논의</p>
+                            <div class="mt-2 flex flex-wrap">
+                                <span class="text-sm bg-blue-100 text-blue-800 rounded-full px-2 py-1 mr-2 mb-2">주요 발언: 홍석민, 추교섭, 심영훈</span>
+                                <span class="text-sm bg-gray-100 text-gray-800 rounded-full px-2 py-1 mr-2 mb-2">물류 실장과의 미팅 내용 공유</span>
+                                <span class="text-sm bg-gray-100 text-gray-800 rounded-full px-2 py-1 mr-2 mb-2">경영지원실장과의 소통 내용</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 두 번째 회의 -->
+                    <div class="ml-6">
+                        <div class="flex items-center mb-1">
+                            <div class="absolute -left-3 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                                <i class="fas fa-calendar-day text-white text-xs"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800">2차 회의 (오후 4:40 - 21분 44초)</h3>
+                        </div>
+                        <div class="session-2 p-4 rounded">
+                            <p class="text-gray-700">워크숍 일정, 조합 활성화 및 소통 강화 방안, 물류노동자 분리교섭 등 논의</p>
+                            <div class="mt-2 flex flex-wrap">
+                                <span class="text-sm bg-green-100 text-green-800 rounded-full px-2 py-1 mr-2 mb-2">주요 발언: 홍석민, 김영문, 박희덕, 심영훈</span>
+                                <span class="text-sm bg-gray-100 text-gray-800 rounded-full px-2 py-1 mr-2 mb-2">워크숍 6월 13일 15시 확정</span>
+                                <span class="text-sm bg-gray-100 text-gray-800 rounded-full px-2 py-1 mr-2 mb-2">오상현 위원장 초청 강연</span>
+                                <span class="text-sm bg-gray-100 text-gray-800 rounded-full px-2 py-1 mr-2 mb-2">오승훈 소통간사 소개</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- By Topic Tab -->
+        <div id="by-topic" class="tab-content">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">주제별 논의 내용</h2>
+                <p class="text-gray-700 mb-4">각 주제에 대한 논의 내용을 펼쳐서 확인할 수 있습니다.</p>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="topic-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 cursor-pointer" data-topic="all">전체</span>
+                    <span class="topic-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 cursor-pointer" data-topic="session1">1차 회의</span>
+                    <span class="topic-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 cursor-pointer" data-topic="session2">2차 회의</span>
+                </div>
+            </div>
+
+            <!-- 1차 회의 주제 -->
+            <div class="topic-group session1">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-blue-100 text-blue-800">1차 회의</span>
+                            비정규직 근무형태와 인사 운영
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-blue-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">국내 물류실장과의 논의에서 비정규직 근무형태 변경(조근에서 야간으로)에 대한 부정적 입장이 표명됨. 주된 이유는 예산 문제와 고용 유연성 감소 우려.</p>
+                            <p class="text-gray-700">정규직과 비정규직 간 처우 차별이 지적됨. 정규직의 요구는 수용하면서 비정규직 요구는 거부하는 이중적 태도 비판.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "물류 실장은 부정적이고 돈에 대해 민감하게 생각함. 기간제는 한 달씩 계약하는 고용 유연성 유지를 원함. 조근을 야간으로 옮기면 물량 감소 시 계약 해지가 어려워진다는 우려."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">추교섭:</span> "우리가 추구하는 것은 8시간짜리를 8시간으로 하는 것. 많은 인원이 아니고 10명도 안 되는 인원인데 계속 핑계만 대는 상황."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "5월 15일까지 답변을 요구했고, 안 되면 처장과 이사장 면담을 신청하여 결론을 내리겠다."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-red-100 text-red-800">1차 회의</span>
+                            정규직-비정규직 인사 및 처우 차이
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-red-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">정규직과 비정규직 간 처우 차이와 회사의 이중적 태도에 대한 불만이 표출됨. 정규직은 필요에 따라 인원을 늘리고 줄이며, 임금 동결 대신 근무시간을 줄이는 반면, 비정규직의 요구는 수용되지 않음.</p>
+                            <p class="text-gray-700">조직 내 비정규직을 대하는 기본 자세에 대한 문제 제기.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "주임 10명이었다가 12명으로 늘리고, 다시 10명으로 줄이면서 발송 도우미 3명을 늘렸다가, 다시 12명으로 늘리면서도 발송 도우미는 유지. 정규직이 원하는 건 다 해주면서 우리가 해달라는 건 못해준다."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "정규직은 총액임금제로 올해 임금이 동결됐지만, 대신 시간외 근무가 15시간 이내로 줄어들고, 그 일은 기간제가 맡게 됨."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "말로만 '한 가족'이라고 하면서 실제로는 비정규직에 대한 배려가 없다. 이건 비정규직을 대하는 기본적인 자세 문제."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-green-100 text-green-800">1차 회의</span>
+                            명절 보로금 통상임금 삽입 및 주휴수당 반영 문제
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-green-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">명절 보로금을 통상임금에 삽입하는 문제가 해결되어, 6월 말 전 지급 예정. 하지만 통상임금 인상 시 주휴수당도 함께 올라야 하는 법적 문제가 있으나, 회사가 이를 반영하지 않을 가능성 논의.</p>
+                            <p class="text-gray-700">주휴수당 문제를 제기할 경우, 회사가 일주일에 5일 모두 연차를 쓰면 주휴수당을 삭감하는 방식으로 대응할 우려 있음.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">심영훈:</span> "통상임금에 정률로 지급되는 명절 보로금이 포함되면 주휴수당도 올라야 함. 법적으로는 분명함. 그러나 회사는 주휴수당을 인상하지 않을 가능성이 높음."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">심영훈:</span> "이 문제를 제기하면 회사가 '그러면 우리도 법대로 하겠다'며 5일 연차를 쓰면 주휴수당을 삭감할 수 있음. 집중국에서는 이미 그렇게 하고 있어서 직원들이 병가도 4일만 씀."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">추교섭:</span> "소수 때문에 이 문제를 안 건드릴 수는 없다. 전체를 봤을 때 주급도 올라가야 맞다고 생각함."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">심영훈:</span> "야간 근무자는 통상임금 인상 시 시간외 근무 수당이 올라 1달에 10만원 이상 인상 효과가 있을 것."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-pink-100 text-pink-800">1차 회의</span>
+                            임금협상, 근속인정 소송, 노조 사무실 배정
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-pink-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">임금협상, 근속인정 소송, 노조 사무실 배정 등의 진행 현황 및 향후 계획에 대한 논의. 근속인정 소송은 1차 변론이 끝났고, 2차 변론이 6월 예정.</p>
+                            <p class="text-gray-700">노조 사무실 배정과 관련하여 조합원 비율에 따른 배정 기준, 단협 문구 유무 등의 문제 논의.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">배정필:</span> "임금협상은 진척이 없음. 근속인정 소송은 1차 변론이 끝났고, 변호사 준비가 미흡했음. 2차 변론이 6월 10일 예정되어 있고, 반박 준비 중."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">배정필:</span> "노조 사무실 배정 관련, 우리는 단협에 사무실 제공 문구가 없지만, 교대 노조는 있음. 공동 사용 의무 여부에 대한 논의 필요."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">심영훈:</span> "노조 사무실 배정은 복수 노조 현실에서 중요한 문제. 단협에 더 명확한 문구가 필요함."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2차 회의 주제 -->
+            <div class="topic-group session2">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-yellow-100 text-yellow-800">2차 회의</span>
+                            워크숍 일정 및 참석 대상, 운영 방식
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-yellow-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">6월 13일 15시에 워크숍 진행 예정. 운영위 회의 후 초청 강사(오상현 위원장) 강연, 이후 화합의 장 순으로 진행.</p>
+                            <p class="text-gray-700">참석자 규모는 최대 17명, 참석 대상(간부, 대의원 포함 여부)에 대한 논의와 명분 문제 논의.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "15시 30분에 30분 동안 운영위 간단히 하고, 쉬었다가 오상현 위원장님 초청 강연(노조 발전 관련) 1시간, 이후 화합의 장."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">김영문:</span> "참여 인원 17명으로 예약. 각 지부별 참석 인원 파악 필요. 1박 2일이라 참석률 우려됨."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">여러명:</span> "대의원 참석 여부, 명분 문제 논의. 과거에도 대의원 대 이름으로 참석했는지 확인 필요."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">배정필:</span> "대의원은 성격이 다르고, 하반기에 대의원 대회가 있으니 운영위원들끼리 하는 게 좋을 것."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-purple-100 text-purple-800">2차 회의</span>
+                            조합 활성화 및 조합원 소통 강화 방안
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-purple-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">조합원과의 소통을 강화하고 조합에 대한 소속감을 높이기 위한 다양한 방안 논의. 월별 생일 파티, 작은 선물 증정 등 감동을 줄 수 있는 방법 모색.</p>
+                            <p class="text-gray-700">이미 일부 지부에서 시행 중인 생일 선물, 여름 음료 제공, 휴게실 내 간식/커피 제공 등의 사례 공유.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">박희덕:</span> "우리 조합이 특별한 감동과 인간미를 줄 수 있는 방법 필요. 매월 생일자 파티나 작은 선물로 감사 표현하는 것이 중요."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">여러명:</span> "일부 지부에서 이미 생일자에게 2만원 상품권 지급, 간식/음료수 제공 등 진행 중."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">이도희:</span> "보여주기식이라도 조합원이 감동을 느낄 수 있는 활동 필요."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">김영문:</span> "생일자가 부끄러워하는 경우도 있어 조용히 전달하는 방식 선호."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-indigo-100 text-indigo-800">2차 회의</span>
+                            물류노동자 분리교섭 이슈 및 내부 결집 홍보
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-indigo-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">물류 사업부 분리교섭 추진 가능성과 물류노동자 내부 결집을 위한 홍보 방안 논의. 현 상황에 대한 문제 제기와 물류노동자의 독자적 목소리 필요성 주장.</p>
+                            <p class="text-gray-700">분리교섭 제도적 한계(노동위원회 결정 사항, 대기업 사례 대부분 기각), 노노갈등 심화 우려 등 현실적 문제도 함께 논의.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "물류 사업부 판을 흔들어볼 필요가 있음. 택배 노조도 분리교섭을 하는데, 물류도 독자적으로 교섭할 필요가 있음. 물류끼리 단결하자는 내용의 대자보 제안."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">심영훈:</span> "분리교섭은 노동위원회에서 결정하는 사항으로, 웬만해서는 인정되지 않음. 현대차 등 대기업 사례에서도 대부분 기각. 굳이 분리교섭과 연결하지 않고 물류노동자 단결 메시지만으로도 충분할 것."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">김영문:</span> "현실적으로 인원이 부족해 분리교섭 실현 가능성 낮음. 기존 대자보 등으로 효과를 보지 못했던 경험 있음."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">배정필:</span> "분리교섭 자체는 어렵더라도 물류노동자들에게 현 상황의 문제점을 알릴 필요는 있음."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6 topic-card">
+                    <div class="flex justify-between items-center cursor-pointer collapse-header">
+                        <h3 class="text-lg font-semibold text-gray-800">
+                            <span class="badge bg-gray-100 text-gray-800">2차 회의</span>
+                            기타 안건 및 회의 마무리
+                        </h3>
+                        <span class="collapse-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="collapse-content mt-4">
+                        <div class="border-l-4 border-gray-500 pl-4 mb-4">
+                            <p class="text-gray-700 mb-2">차기 회의 일정(6월 13일 15시, 골드 밸류 펜션) 확정과 신규 간부 오승훈의 자기소개.</p>
+                            <p class="text-gray-700">물류노동자 분리교섭 문제는 워크숍에서 더 심도 있게 논의하기로 결정.</p>
+                        </div>
+                        <div class="mt-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">주요 발언</h4>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "물류노동자 분리교섭 문제는 워크숍에서 다시 논의하고, 오상현 위원장님께 자문도 구해보자."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded mb-2">
+                                <p class="text-gray-800"><span class="font-semibold">홍석민:</span> "차기 회의는 6월 13일 15시, 골드 밸류 펜션에서 진행."</p>
+                            </div>
+                            <div class="bg-gray-100 p-3 rounded">
+                                <p class="text-gray-800"><span class="font-semibold">오승훈:</span> "부평 물류 간부로 처음 참석. 현장 이야기를 들으며 익숙해지고 있으며, 도움이 되도록 노력하겠다."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- By Speaker Tab -->
+        <div id="by-speaker" class="tab-content">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">참석자별 발언 내용</h2>
+                <p class="text-gray-700 mb-4">각 참석자의 주요 발언을 확인할 수 있습니다. 참석자를 클릭하면 해당 참석자의 발언만 필터링됩니다.</p>
+                
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="speaker-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300 active" data-speaker="all">전체</span>
+                    <span class="speaker-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300" data-speaker="hongseokmin">홍석민</span>
+                    <span class="speaker-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300" data-speaker="simyounghoon">심영훈</span>
+                    <span class="speaker-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300" data-speaker="chookyoseop">추교섭</span>
+                    <span class="speaker-filter px-3 py-1 rounded-full bg-gray-200 text-gray-800 hover:bg-gray-300" data-speaker="others">기타 참석자</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 홍석민 -->
+                <div class="bg-white rounded-lg shadow-md p-6 speaker-card" data-speaker="hongseokmin">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 text-blue-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">홍</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold text-gray-800">홍석민</h3>
+                            <p class="text-gray-600 text-sm">비정규직 처우개선, 워크숍 진행</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-4">
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">1차 회의 주요 발언</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>물류 실장과의 미팅에서 비정규직 근무형태 변경에 대한 부정적 반응 전달</li>
+                                <li>정규직은 요구사항이 수용되는 반면, 비정규직 요구는 거부되는 상황 비판</li>
+                                <li>5월 15일까지 답변을 요구하고, 불가 시 처장/이사장 면담 계획</li>
+                                <li>정규직은 총액임금제로 임금 동결, 대신 시간외 근무 15시간 이내로 축소</li>
+                                <li>"말로만 '한 가족'이라고 하면서 실제로는 비정규직에 대한 배려 없음" 지적</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">2차 회의 주요 발언</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>워크숍 일정(6월 13일 15시) 및 진행 순서 제안</li>
+                                <li>물류 사업부 분리교섭 논의 제안, 물류노동자 단결 필요성 강조</li>
+                                <li>워크숍에서 분리교섭 문제 재논의 및 오상현 위원장 자문 제안</li>
+                                <li>차기 회의 일정 확정(6월 13일 15시, 골드 밸류 펜션)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 심영훈 -->
+                <div class="bg-white rounded-lg shadow-md p-6 speaker-card" data-speaker="simyounghoon">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 text-green-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">심</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold text-gray-800">심영훈</h3>
+                            <p class="text-gray-600 text-sm">주휴수당, 통상임금 법리</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-4">
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">1차 회의 주요 발언</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>통상임금에 명절 보로금이 포함되면 주휴수당도 법적으로 인상되어야 함</li>
+                                <li>주휴수당 문제 제기 시 회사가 5일 연차 사용 시 주휴수당 삭감 가능성 경고</li>
+                                <li>집중국 사례: 병가도 4일만 사용하는 관행(5일 연속 사용 시 주휴수당 영향)</li>
+                                <li>야간 근무자의 경우 통상임금 인상 효과 계산(월 10만원 이상)</li>
+                                <li>직무수당, 야간수당 등의 시간당 인상 효과 설명</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">2차 회의 주요 발언</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>분리교섭은 노동위원회 결정 사항으로, 웬만해서는 인정되지 않음 설명</li>
+                                <li>현대차 등 대기업 사무직/생산직 분리교섭 신청 사례 모두 기각된 사례 언급</li>
+                                <li>굳이 분리교섭과 연결하지 않고 물류노동자 단결 메시지만으로도 충분함 제안</li>
+                                <li>노노갈등 심화 시 조직 내 스트레스 증가 우려로 그간 자제해왔던 배경 설명</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 추교섭 -->
+                <div class="bg-white rounded-lg shadow-md p-6 speaker-card" data-speaker="chookyoseop">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 text-red-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">추</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold text-gray-800">추교섭</h3>
+                            <p class="text-gray-600 text-sm">알바 근무현장, 조직 비판</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-4">
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">1차 회의 주요 발언</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>우리가 추구하는 것은 8시간짜리를 8시간으로 하는 것</li>
+                                <li>많은 인원이 아닌 10명도 안 되는 인원에 대해 인건비 핑계는 설득력 없음</li>
+                                <li>소수 때문에 주휴수당 문제를 안 건드릴 수 없으며, 전체를 위해 주급도 인상되어야 함</li>
+                                <li>관리자들도 비정규직 근무형태 변경에 긍정적인 상황에서 회사의 거부는 이해 불가</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">기타 언급</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>부평 지역 알바 근무환경 상세 설명(저녁 7시 출근, 새벽 4~6시 퇴근 등)</li>
+                                <li>회사가 비용만 생각해 알바 관리, 1일 계약으로 고용 불안정성 지적</li>
+                                <li>비정규직을 대하는 회사의 기본 자세 문제 지적</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 기타 참석자 -->
+                <div class="bg-white rounded-lg shadow-md p-6 speaker-card" data-speaker="others">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gray-100 text-gray-800 w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg">기타</div>
+                        <div class="ml-4">
+                            <h3 class="text-xl font-semibold text-gray-800">기타 참석자</h3>
+                            <p class="text-gray-600 text-sm">배정필, 장대석, 이도희, 송현동, 김영문, 박희덕, 오승훈</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-4">
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">배정필</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>임금협상 진척 없음, 근속인정 소송 진행 상황 보고(1차 변론 완료, 2차 6월 예정)</li>
+                                <li>노조 사무실 배정 관련 단협 문구, 공동 사용 의무 등 논의</li>
+                                <li>간부 위주 워크숍 진행 주장, 분리교섭 이슈화 찬성</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">김영문</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>워크숍 참석자 수(17명) 및 숙박, 식사 준비 관련 실무 논의</li>
+                                <li>참석자 확정 5월 말까지 필요, 지부별 참석 인원 파악 요청</li>
+                                <li>대의원 참석 관련 규정 및 관행 설명</li>
+                                <li>분리교섭 실현 가능성에 의문, 기존 홍보 방식 효과 미미함 언급</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">박희덕</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>조합의 감동과 인간미를 전달할 방법 제안(월별 생일파티, 케이크 등)</li>
+                                <li>작은 관심과 인정이 조합원에게 주는 의미 강조</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-gray-800 mb-2">이도희</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>신규 조합원 정착 지원 및 인사 필요성 제안</li>
+                                <li>생일 선물 등 보여주기식이라도 감동 전달 방법 중요성 언급</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-2">오승훈</h4>
+                            <ul class="list-disc pl-5 text-gray-700">
+                                <li>부평 물류 신규 간부로 소개, 낯설지만 현장 이야기 듣고 익숙해지는 중</li>
+                                <li>조합 활동에 도움이 되도록 노력하겠다는 포부 표현</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Tab -->
+        <div id="timeline" class="tab-content">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">회의 타임라인</h2>
+                <p class="text-gray-700 mb-4">두 차례 회의의 시간순 흐름을 확인할 수 있습니다.</p>
+            </div>
+            
+            <div class="relative border-l-2 border-gray-300 ml-8 pl-8 mb-8">
+                <!-- 1차 회의 시작 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-clock text-white text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">오후 3:43 - 1차 회의 시작</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">참석자: 심영훈, 홍석민, 추교섭, 장대석, 이도희, 송현동, 배정필, 김영문</p>
+                </div>
+                
+                <!-- 비정규직 근무형태 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-blue-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-blue-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">비정규직 근무형태 및 인사 운영 논의</h3>
+                        <span class="meeting-time ml-2">00:00 - 07:30</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">홍석민:</span> 물류 실장과의 미팅 내용 공유, 비정규직 근무형태 변경에 부정적 태도</p>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">추교섭:</span> 8시간 근무자의 근무 형태 변경 요구는 합리적, 인원도 적은데 거부는 이해 불가</p>
+                    </div>
+                </div>
+                
+                <!-- 주휴수당 논의 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-blue-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-blue-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">명절 보로금 및 주휴수당 반영 논의</h3>
+                        <span class="meeting-time ml-2">07:30 - 25:00</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">심영훈:</span> 통상임금에 명절 보로금 포함 시 주휴수당도 법적으로 인상 필요, 현실적 문제 설명</p>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">추교섭:</span> 소수를 위해 전체 수당 인상 포기는 맞지 않음, 주휴수당도 올라가야 함</p>
+                    </div>
+                </div>
+                
+                <!-- 임금협상 등 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-blue-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-blue-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">임금협상, 근속인정 소송, 노조 사무실 배정 논의</h3>
+                        <span class="meeting-time ml-2">25:00 - 50:33</span>
+                    </div>
+                    <div class="bg-blue-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">배정필:</span> 임금협상 진척 없음, 근속인정 소송 진행상황, 노조 사무실 배정 관련 논의</p>
+                    </div>
+                </div>
+                
+                <!-- 1차 회의 종료 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-stop text-white text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">오후 4:33 - 1차 회의 종료</h3>
+                    </div>
+                </div>
+                
+                <!-- 2차 회의 시작 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-clock text-white text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">오후 4:40 - 2차 회의 시작</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">참석자: 심영훈, 홍석민, 김영문, 배정필, 박희덕, 이도희, 오승훈 외 여러명</p>
+                </div>
+                
+                <!-- 워크숍 논의 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-green-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">워크숍 일정 및 참석자 논의</h3>
+                        <span class="meeting-time ml-2">00:00 - 05:00</span>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">홍석민:</span> 워크숍 6월 13일 15시 제안, 순서(운영위, 초청 강연, 화합의 장) 제시</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">김영문:</span> 참석자 17명 예약, 지부별 참석자 확인 필요성 언급, 1박 2일 참석률 우려</p>
+                    </div>
+                </div>
+                
+                <!-- 조합 활성화 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-green-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">조합 활성화 및 소통 강화 방안</h3>
+                        <span class="meeting-time ml-2">05:00 - 11:20</span>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">박희덕:</span> 조합원 생일 파티, 작은 선물로 감동과 인간미 전달 방안 제안</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">여러명:</span> 현재 시행 중인 생일 선물, 음료 제공 등 사례 공유, 부끄러워하는 경우 조용히 전달</p>
+                    </div>
+                </div>
+                
+                <!-- 물류노동자 분리교섭 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-green-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">물류노동자 분리교섭 이슈 및 홍보 방안</h3>
+                        <span class="meeting-time ml-2">11:20 - 20:27</span>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">홍석민:</span> 물류 사업부 판을 흔들어볼 필요, 물류노동자 단결 및 분리교섭 추진 제안</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">심영훈:</span> 분리교섭 제도적 한계 설명, 대기업 사례 대부분 기각, 단결 메시지만으로도 충분</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">홍석민:</span> 워크숍에서 재논의 및 오상현 위원장 자문 제안</p>
+                    </div>
+                </div>
+                
+                <!-- 신규 간부 소개 및 마무리 -->
+                <div class="mb-8 relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-green-200 rounded-full flex items-center justify-center">
+                        <i class="fas fa-comment text-green-600 text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">차기 회의 및 신규 간부 소개</h3>
+                        <span class="meeting-time ml-2">20:27 - 21:44</span>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded mb-2">
+                        <p class="text-gray-800"><span class="font-semibold">홍석민:</span> 차기 회의 6월 13일 15시, 골드 밸류 펜션 확정</p>
+                    </div>
+                    <div class="bg-green-50 p-3 rounded">
+                        <p class="text-gray-800"><span class="font-semibold">오승훈:</span> 부평 물류 신규 간부 자기소개 및 포부 표현</p>
+                    </div>
+                </div>
+                
+                <!-- 2차 회의 종료 -->
+                <div class="relative">
+                    <div class="absolute -left-10 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                        <i class="fas fa-stop text-white text-xs"></i>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <h3 class="text-lg font-semibold text-gray-800">오후 5:02 - 2차 회의 종료</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h3 class="text-xl font-semibold">운영위원회의 2025_05_02 회의록 요약</h3>
+                    <p class="text-gray-400 mt-1">© 2025 운영위원회</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-gray-400">문의: admin@union.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Navigation
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Collapse functionality
+        const collapseHeaders = document.querySelectorAll('.collapse-header');
+        
+        collapseHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('.collapse-icon i');
+                
+                content.classList.toggle('show');
+                
+                if (content.classList.contains('show')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+        
+        // Speaker Filtering
+        const speakerFilters = document.querySelectorAll('.speaker-filter');
+        const speakerCards = document.querySelectorAll('.speaker-card');
+        
+        speakerFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                const speaker = this.getAttribute('data-speaker');
+                
+                speakerFilters.forEach(f => f.classList.remove('active'));
+                this.classList.add('active');
+                
+                if (speaker === 'all') {
+                    speakerCards.forEach(card => card.style.display = 'block');
+                } else {
+                    speakerCards.forEach(card => {
+                        if (card.getAttribute('data-speaker') === speaker) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Topic Filtering
+        const topicFilters = document.querySelectorAll('.topic-filter');
+        const topicGroups = document.querySelectorAll('.topic-group');
+        
+        topicFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                const topic = this.getAttribute('data-topic');
+                
+                topicFilters.forEach(f => f.classList.remove('bg-blue-500', 'text-white'));
+                topicFilters.forEach(f => f.classList.add('bg-gray-200', 'text-gray-800'));
+                this.classList.remove('bg-gray-200', 'text-gray-800');
+                this.classList.add('bg-blue-500', 'text-white');
+                
+                if (topic === 'all') {
+                    topicGroups.forEach(group => group.style.display = 'block');
+                } else {
+                    topicGroups.forEach(group => {
+                        if (group.classList.contains(topic)) {
+                            group.style.display = 'block';
+                        } else {
+                            group.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

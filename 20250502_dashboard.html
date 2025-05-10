@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물류노조 5월 정기회의 대시보드</title>
+    <link rel="stylesheet" href="20250502_dashboard.css">
+    <!-- Font Awesome 아이콘 사용을 위한 링크 (선택 사항) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1><i class="fas fa-clipboard-list"></i> 물류노조 운영위원회 5월 정기회의 요약</h1>
+            <p class="subtitle">주요 안건 및 논의사항 대시보드</p>
+        </header>
+
+        <main class="grid-container">
+            <!-- 1. 계약직 근무형태 변경 건 -->
+            <div class="card" id="item1">
+                <div class="card-header">
+                    <h2><i class="fas fa-user-clock"></i> 계약직 근무형태 변경 건</h2>
+                    <span class="status pending">검토 중</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>현황:</strong> 조근(아침) → 야간 변경 요청에 회사 부정적 (비용, 고용 유연성 문제).</p>
+                    <p><strong>노조 주장:</strong> 정규직 요구 수용하면서 계약직 요구 외면은 불공평. 근무형태 변경 사전 조사 요청.</p>
+                    <p><strong>경과:</strong> 경영지원실장 적극 검토 지시, 물류실장 난색.</p>
+                    <p><strong>마감/조치:</strong> <strong>5월 15일</strong>까지 답변 요청. 미해결 시 처장/이사장 면담.</p>
+                </div>
+            </div>
+
+            <!-- 2. 정규직과 비정규직 차별 문제 -->
+            <div class="card" id="item2">
+                <div class="card-header">
+                    <h2><i class="fas fa-balance-scale-left"></i> 정규직-비정규직 차별 문제</h2>
+                    <span class="status ongoing">논의 중</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>문제점:</strong> 정규직 임금 동결 불구, 시간외 근무 축소분 기간제 전가.</p>
+                    <p><strong>노조 촉구:</strong> '한 가족' 구호 넘어 실질적 행동 요구.</p>
+                </div>
+            </div>
+
+            <!-- 3. 명절보로금 해결 -->
+            <div class="card" id="item3">
+                <div class="card-header">
+                    <h2><i class="fas fa-gifts"></i> 명절보로금 해결</h2>
+                    <span class="status resolved">해결됨</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>결과:</strong> 통상임금에 삽입, <strong>6월 말 전 지급</strong> 결정.</p>
+                    <p><strong>참고:</strong> 물류실장 불만 (공무직 임금 인상 vs 정규직 동결). 성과금 법원 판단 2-3년 소요 예상.</p>
+                </div>
+            </div>
+
+            <!-- 4. 주휴수당 관련 논의 -->
+            <div class="card" id="item4">
+                <div class="card-header">
+                    <h2><i class="fas fa-coins"></i> 주휴수당 관련 논의</h2>
+                    <span class="status monitoring">상황 주시</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>쟁점:</strong> 통상임금 증가분에 주휴수당 반영 판결.</p>
+                    <p><strong>효과:</strong> 1인당 주휴일 하루 당 약 3천원 추가.</p>
+                    <p><strong>리스크:</strong> 연차 5일 사용 시 미지급 대응 가능성 (우편집중국 사례).</p>
+                    <p><strong>대응:</strong> 회사 결정 주시 후 대응.</p>
+                </div>
+            </div>
+
+            <!-- 5. 워크숍 계획 -->
+            <div class="card event" id="item5">
+                <div class="card-header">
+                    <h2><i class="fas fa-chalkboard-teacher"></i> 워크숍 계획</h2>
+                    <span class="status upcoming">예정</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>일시:</strong> <strong>6월 13일 오후 3시</strong></p>
+                    <p><strong>인원:</strong> 총 17명 예약 (간부 대상)</p>
+                    <p><strong>내용:</strong> 운영위 회의, 휴식, 초청강사(오상현 위원장) 강연.</p>
+                    <p><strong>참석:</strong> 지부별 인원 확인 중, 당일 참석 가능.</p>
+                </div>
+            </div>
+
+            <!-- 6. 신규 조합원 소개 및 환영 방안 -->
+            <div class="card" id="item6">
+                <div class="card-header">
+                    <h2><i class="fas fa-user-friends"></i> 신규 조합원 환영 방안</h2>
+                    <span class="status discussion">제안</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>제안:</strong> 가입 시 소개 자리 마련, 생일 축하 등 소소한 이벤트.</p>
+                    <p><strong>목표:</strong> 소속감 및 연대감 증진.</p>
+                </div>
+            </div>
+
+            <!-- 7. 노조 사무실 확보 문제 -->
+            <div class="card" id="item7">
+                <div class="card-header">
+                    <h2><i class="fas fa-building"></i> 노조 사무실 확보</h2>
+                    <span class="status mixed">일부 해결</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>성남지부:</strong> <strong>사무실 확보 완료</strong> (조합원 37명, 20% 이상 충족).</p>
+                    <p><strong>조건:</strong> 타 노조와 공동 사용.</p>
+                    <p><strong>본조 사무실:</strong> 규정상 현재 확보 어려움.</p>
+                </div>
+            </div>
+
+            <!-- 8. 근속 기간 인정 소송 -->
+            <div class="card legal" id="item8">
+                <div class="card-header">
+                    <h2><i class="fas fa-gavel"></i> 근속 기간 인정 소송</h2>
+                    <span class="status ongoing">진행 중</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>1차 변론:</strong> 4월 1일 (변호사 준비 미흡 평가).</p>
+                    <p><strong>2차 변론:</strong> <strong>6월 10일 예정</strong>.</p>
+                    <p><strong>조치:</strong> 철저한 소송 준비, 우본 준비서면 반박 서면 작성 중.</p>
+                </div>
+            </div>
+
+            <!-- 9. 계약직 근로자 처우 문제 (안양) -->
+            <div class="card" id="item9">
+                <div class="card-header">
+                    <h2><i class="fas fa-exclamation-triangle"></i> 계약직 처우 문제 (안양)</h2>
+                    <span class="status urgent">추가 논의 필요</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>문제:</strong> 일부 기간제 야간 근무자 조기 퇴근 강요 (계약 위반, 노동권 침해 소지).</p>
+                    <p><strong>원인:</strong> 물량 없음.</p>
+                    <p><strong>대응:</strong> 회사와 추가 논의 및 지속적 노력 필요.</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>본 요약은 운영위원회 5월 정기회의 주요 안건과 논의사항을 담고 있습니다.</p>
+            <p>&copy; 물류노조 운영위원회</p>
+        </footer>
+    </div>
+
+    <script src="20250502_dashboard.js"></script>
+</body>
+</html>
