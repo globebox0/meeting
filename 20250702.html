@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>물류 노동조합 운영위원회의 - 2025.07.04 (개선)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light:#2196F3;
+            --primary-dark: #174ea6;
+            --accent: #ffc107;
+            --success: #1a7f37;
+            --success-bg: #e6f9e6;
+            --warning: #b38600;
+            --warning-bg: #fffbe6;
+            --danger: #d32f2f;
+            --danger-bg: #ffeaea;
+            --card-bg: #f1f5fb;
+            --section-bg: #fff;
+            --section-shadow: 0 2px 8px rgba(37,99,235,0.08);
+            --border-radius: 12px;
+            --font-main: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-main);
+            background: #f8f9fa;
+            color: #222;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 18px 10px 40px 10px;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, #764ba2 100%);
+            color: #fff;
+            padding: 32px 20px 24px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .header .date {
+            font-size: 1.05rem;
+            opacity: 0.93;
+            margin-bottom: 10px;
+        }
+        .section {
+            background: var(--section-bg);
+            margin-bottom: 22px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--section-shadow);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+        .section-header {
+            background: var(--primary);
+            color: #fff;
+            padding: 18px 22px;
+            font-size: 1.18rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--primary-dark);
+            transition: background 0.2s;
+        }
+        .section-header:hover {
+            background: var(--primary-dark);
+        }
+        .section-content {
+            padding: 22px 22px 10px 22px;
+            display: none;
+            background: var(--section-bg);
+            animation: fadeIn 0.4s;
+        }
+        .section-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: none; }
+        }
+        .toggle-icon {
+            font-size: 1.2em;
+            transition: transform 0.3s;
+        }
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+        .subsection {
+            margin-bottom: 22px;
+            padding: 18px 18px 12px 18px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary);
+        }
+        .subsection h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.08rem;
+            font-weight: 600;
+        }
+        .speaker {
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .content {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            font-size: 1.01rem;
+        }
+        .highlight {
+            background: #fffbe6;
+            padding: 13px 16px;
+            border-radius: 7px;
+            border-left: 5px solid var(--accent);
+            margin: 14px 0 10px 0;
+            font-size: 1.04rem;
+        }
+        .agenda-list {
+            list-style: none;
+            padding: 0;
+        }
+        .agenda-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--section-shadow);
+            margin-bottom: 22px;
+            padding: 22px 22px 14px 28px;
+            border-left: 7px solid var(--primary-light);
+            position: relative;
+            transition: box-shadow 0.2s;
+        }
+        .agenda-item:hover {
+            box-shadow: 0 6px 18px rgba(37,99,235,0.13);
+        }
+        .agenda-item strong {
+            font-size: 1.13rem;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 700;
+        }
+        .agenda-item ul, .agenda-item ol {
+            margin: 12px 0 0 20px;
+            padding-left: 0;
+        }
+        .agenda-item ul li, .agenda-item ol li {
+            margin-bottom: 7px;
+            font-size: 1.01rem;
+        }
+        .agenda-item:not(:last-child)::after {
+            content: '';
+            display: block;
+            height: 1px;
+            background: #e3eaf2;
+            margin: 22px -22px 0 -22px;
+        }
+        .agenda-icon {
+            font-size: 1.18em;
+            margin-right: 4px;
+        }
+        /* 강조 텍스트 일관성 */
+        .strong, b, strong {
+            color: var(--primary-dark);
+            font-weight: 700;
+            background: #eaf1ff;
+            border-radius: 4px;
+            padding: 1px 5px;
+        }
+        /* 접근성: 포커스 스타일 */
+        .section-header:focus {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
+        }
+        /* 반응형 */
+        @media (max-width: 900px) {
+            .container { max-width: 100%; padding: 8px; }
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.3rem; }
+            .section-header { padding: 13px 10px; font-size: 1rem; }
+            .section-content { padding: 13px 8px 8px 8px; }
+            .subsection { padding: 10px 8px 8px 8px; }
+            .agenda-item { padding: 12px 8px 8px 12px; font-size: 0.97rem; }
+            .agenda-item strong { font-size: 1rem; }
+        }
+        /* 섹션 토글 아이콘 개선 (Material Icons) */
+        .toggle-icon {
+            font-family: 'Material Icons', Arial, sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.4em;
+            user-select: none;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>물류 노동조합 운영위원회의</h1>
+            <div class="date">2025년 7월 4일 (금)</div>
+        </div>
+        <div class="section">
+            <div class="section-header" tabindex="0" onclick="toggleSection(this)">
+                <span>📋 6월 13일 워크숍 평가</span>
+                <span class="toggle-icon">expand_more</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>참여율 및 진행 방식</h4>
+                    <div class="speaker">홍석민 위원장</div>
+                    <div class="content">• 참여율 저조가 아쉬움<br>• 운영위원들의 일정 조정 필요</div>
+                    <div class="speaker">배정필</div>
+                    <div class="content">• 1박 2일보다 당일 워크숍이 참여율 면에서 유리<br>• 회의 시간 부족, 더 많은 주제 논의 필요</div>
+                </div>
+                <div class="subsection">
+                    <h4>개선 방안</h4>
+                    <div class="speaker">성소옥</div>
+                    <div class="content">• 식사 시간 조정으로 회의 시간 확보<br>• 깊이 있는 논의 시간 부족 해결</div>
+                    <div class="speaker">신성훈</div>
+                    <div class="content">• 등산 등 활동 후 식사하는 방식 제안<br>• 성취감과 유대관계 형성 효과</div>
+                </div>
+                <div class="highlight">
+                    <strong>결론:</strong> 내년 워크숍 시 참여율 제고와 회의 시간 확보를 통한 알찬 프로그램 구성
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header" tabindex="0" onclick="toggleSection(this)">
+                <span>💰 급여 및 경영평가 관련</span>
+                <span class="toggle-icon">expand_more</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>명절 보로금 통상임금 산입</h4>
+                    <div class="content">
+                        • 5월 급여부터 산입 완료<br>
+                        • 소급분 6월 27일 지급 완료
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>경영평가 현황</h4>
+                    <div class="speaker">김영문 사무국장</div>
+                    <div class="content">
+                        • 외부평가: D등급 (지급액 0)<br>
+                        • 내부평가: 사업소별 A, B, C 등급<br>
+                        • 성과관리위원회 심의: 7월 중<br>
+                        • 지급 시기: 7월 말 예정
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span>👥 조합원 현황</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>조합원 변동 사항</h4>
+                    <div class="speaker">김영문</div>
+                    <div class="content">
+                        • 안무: 퇴직 2명, 기간제→공무직 전환 4명<br>
+                        • 부평: 퇴직 2명, 기간제→공무직 전환 4명<br>
+                        • 공무직 증가 추세 <span class="status-badge status-complete">긍정적</span>
+                    </div>
+                    
+                    <div class="speaker">송현동</div>
+                    <div class="content">• 안물: 기간제 9명 유지 (1명 자진퇴사)</div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>조합비 사용 내역</h4>
+                    <div class="speaker">성소옥 회계</div>
+                    <div class="content">
+                        • 워크숍 강사비: 20만원 (찬조금으로 환원)<br>
+                        • 다과비: 5만 5,210원<br>
+                        • 현재 잔액: 125만 8,860원<br>
+                        • 워크숍 비용 대부분 운영진 찬조금으로 충당
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span>⚠️ 안양물류 현안</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>당일연차 3회 제재 문제</h4>
+                    <div class="speaker">장대석</div>
+                    <div class="content">
+                        • 분기별 당일연차 3회 시 조출/주말근무 제외<br>
+                        • 본사 공문 없이 사업소 자체 규정 시행 <span class="status-badge status-issue">문제</span><br>
+                        • 4개 노조 지부장 공동 대응 필요
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>조기출근 형평성 문제</h4>
+                    <div class="speaker">이용석</div>
+                    <div class="content">
+                        • 특정 인원(1노조 지부장)만 조기출근 혜택<br>
+                        • 다른 지부장들과 공동 대응 진행 중 <span class="status-badge status-pending">진행중</span><br>
+                        • 경인지사장 면담 및 감사청구 검토
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>기타 건의사항</h4>
+                    <div class="content">
+                        • 정년퇴직 시기 통일 (6월→12월)<br>
+                        • 공무직 전환 심사기준 투명화<br>
+                        • 휴게시간 통일 적용<br>
+                        • 근속수당 및 복지포인트 개선
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span>🏢 부평물 현안</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>시설 개선 요청</h4>
+                    <div class="speaker">신성훈</div>
+                    <div class="content">
+                        • 퇴직자 조출 불가 (소장 거부) <span class="status-badge status-issue">거부</span><br>
+                        • 여성 샤워실 설치 요청<br>
+                        • 냉방 가동 조건 개선 필요
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>근무환경 개선</h4>
+                    <div class="speaker">성소옥</div>
+                    <div class="content">
+                        • 수작업장 온도 28도, 습도 78% <span class="status-badge status-issue">고온</span><br>
+                        • 냉방 효과 지역별 편차 심각<br>
+                        • 여성 화장실 이용 불편
+                    </div>
+                    
+                    <div class="highlight">
+                        <strong>건의사항:</strong> 실내 온도 측정 방식 개선 및 현장 체감온도 반영 필요
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span>📢 우정노조 활동</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>홍보 활동</h4>
+                    <div class="speaker">배정필</div>
+                    <div class="content">
+                        • 부천, 성남 집중국 노조 현판 설치 완료 <span class="status-badge status-complete">완료</span><br>
+                        • 노조 소식지 제작<br>
+                        • 노조 조끼 제작 계획
+                    </div>
+                </div>
+                
+                <div class="subsection">
+                    <h4>확대간부회의 성과</h4>
+                    <div class="content">
+                        • 성남 지부 사무실에서 17명 참석<br>
+                        • 오프라인 회의의 장점 확인<br>
+                        • 워크숍 추가 개최 요청
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <span>🎯 향후 계획</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>주요 일정</h4>
+                    <div class="content">
+                        • 단체협상 및 임금협상 준비<br>
+                        • 워크숍 개선방안 반영<br>
+                        • 각 지부 현안 지속 대응<br>
+                        • 노조 홍보 활동 강화
+                    </div>
+                </div>
+                
+                <div class="highlight">
+                    <strong>중요:</strong> 각 지부별 현안사항은 지속적인 모니터링과 공동 대응이 필요하며, 단체협상을 통한 근본적 해결 방안 모색
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-header" tabindex="0" onclick="toggleSection(this)">
+                <span>📝 안건 회의</span>
+                <span class="toggle-icon">expand_more</span>
+            </div>
+            <div class="section-content">
+                <div class="subsection">
+                    <h4>주요 논의 안건</h4>
+                    <div class="content">
+                        <ol class="agenda-list">
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">⏰</span>현장 근무시간(연장·조출) 운영 문제</strong>
+                                <ul>
+                                    <li>월·화 야간연장 및 조출 필요성 지속 제기</li>
+                                    <li>스케줄 변경 잦아 현장 혼선 → 근무표·근무인원 사전공지 요구</li>
+                                    <li>추가근무자 선별 기준 불투명</li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🤝</span>2025년 단체교섭(12월 시작) 준비</strong>
+                                <ol type="A">
+                                    <li>
+                                        <strong>임금·복지 요구안</strong>
+                                        <ul>
+                                            <li>복지포인트: 5년마다 5만 → <b>매년 1만 인상</b> 재요구</li>
+                                            <li>식대: 공무원 인상 연동 지연(17만 원선) → <b>즉각 인상 촉구</b></li>
+                                            <li>장기근속 휴가: 10년↑ 3일 → <b>5–10일 확대 요구</b></li>
+                                            <li>퇴직월 통일: 6월 → <b>12월로 변경</b> (연말정산·급여 불이익 방지)</li>
+                                        </ul>
+                                    </li>
+                                    <li style="margin-top:8px;">
+                                        <strong>근로조건</strong>
+                                        <ul>
+                                            <li>하절기 휴게시간 확대 (예: 1h20m 근무+20m 휴식 → <b>1h30m+30m</b>)</li>
+                                            <li>연장 4h 초과 시 <b>식사·간식 제공 의무화</b> (타 공공기관 사례 참고)</li>
+                                            <li>월요일 대물량일 <b>휴식 축소 방지</b> 조항 명시</li>
+                                        </ul>
+                                    </li>
+                                    <li style="margin-top:8px;">
+                                        <strong>교섭 전략</strong>
+                                        <ul>
+                                            <li>대표노조(교대노조)에 <b>공동요구안·성명서·등자보</b>로 압박</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🆕</span>신규 직원 노조 가입 안내</strong>
+                                <ul>
+                                    <li>복수노조(1·2·3·4노조) <b>비교표 1장 계약서 동봉</b> 요청</li>
+                                    <li>사무실·출입구·카드지·화장실 앞 등 <b>가입서 비치 의무화</b> 추진</li>
+                                    <li>현판·안내문 <b>부착 위치 실태 조사</b></li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🌡️</span>하절기 근무환경·휴게 개선</strong>
+                                <ul>
+                                    <li>'휴게시간 확대 vs 물량 감소' <b>맞교환 요구</b></li>
+                                    <li>냉방 부족·작업장 온습도 <b>실측 후 개선안 준비</b></li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🗳️</span>하반기 노조 일정 및 선거</strong>
+                                <ul>
+                                    <li>9월 운영위까지 <b>위원장 선거·대의원대회·재정·사업 감사</b> 일정 확보</li>
+                                    <li>부평·안물 지부 <b>대의원 보궐선거 시급</b></li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🛠️</span>운영위원회 운영 방식 개선</strong>
+                                <ul>
+                                    <li>회의 진행자·코너 <b>임원 교대 담당</b></li>
+                                    <li>안건·회의자료: <b>1주 전 배포 → 1일 전 최종 업로드</b></li>
+                                    <li>'중점 안건' 제안자가 <b>회의 주재 및 자료 조사 책임</b></li>
+                                    <li>장소·시간: <b>15:30 → 16:00, 중간 거점(카페·스터디룸) 대여 검토</b></li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">🍧</span>복날 간식·조합비 집행</strong>
+                                <ul>
+                                    <li>초복·말복: <b>아이스크림·햄버거·음료 등 지부별 예산 맞춰 지원</b></li>
+                                    <li>본조: <b>지부 1:1 매칭 또는 번갈아 지원 방식 논의</b></li>
+                                    <li>커피차/밥차는 <b>가을 이후 홍보행사로 검토</b> (예산 100명 기준)</li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">📣</span>노조 홍보·캠페인</strong>
+                                <ul>
+                                    <li>"직원을 소중하게, 소통은 평등하게" <b>현수막 제작·전 사업소 부착</b></li>
+                                    <li>게시판·사내망에 <b>교섭 요구안·휴게시간 캠페인 게시</b></li>
+                                    <li>등자보·성명서(교육국장 초안 → 운영위 피드백)</li>
+                                </ul>
+                            </li>
+                            <li class="agenda-item">
+                                <strong><span class="agenda-icon">💬</span>소통간사(최진옥) 인사 및 제언</strong>
+                                <ul>
+                                    <li>기간제 시각에서 <b>노조 정보 부재</b> 문제 체감</li>
+                                    <li>단체협상·복수노조 <b>정보 1장 요약 필요성</b> 강조</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.classList.remove('rotated');
+                icon.textContent = 'expand_more';
+            } else {
+                content.classList.add('active');
+                icon.classList.add('rotated');
+                icon.textContent = 'expand_less';
+            }
+        }
+        // 첫 번째 섹션을 기본으로 열어둠
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstSection = document.querySelector('.section-content');
+            const firstIcon = document.querySelector('.toggle-icon');
+            if (firstSection && firstIcon) {
+                firstSection.classList.add('active');
+                firstIcon.classList.add('rotated');
+                firstIcon.textContent = 'expand_less';
+            }
+        });
+    </script>
+</body>
+</html> 
