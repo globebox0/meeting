@@ -66,7 +66,7 @@
         /* Paragraphs */
         .content-section p {
             margin-bottom: 10px;
-            font-size: 0.95em;
+            font-size: 1em;
         }
 
         /* Lists */
@@ -152,6 +152,40 @@
             letter-spacing: -1px;
             box-sizing: border-box;
         }
+        .accordion {
+            margin: 10px 0;
+        }
+        .accordion-btn {
+            background-color: #fffbe6;
+            color: #8b8b8b;
+            cursor: pointer;
+            padding: 10px 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 0.9em;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: background 0.2s;
+            margin-bottom: 4px;
+        }
+        .accordion-btn:hover, .accordion-btn.active {
+            background-color: #ffe7b3;
+        }
+        .accordion-panel {
+            padding: 0 18px 10px 18px;
+            background-color: #f8f8f8;
+            border-left: 4px solid #EE7A00;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease;
+            font-size: 0.95em;
+        }
+        .accordion-panel.open {
+            max-height: 200px; /* 충분히 큰 값 */
+            padding-top: 8px;
+        }
     </style>
 </head>
 <body>
@@ -214,15 +248,17 @@
                     <li>파업 뒤 원청에게 수십~수백억 원을 청구하는 <span class="highlight-bold">'손배·가압류'</span>는 단체행동권을 위축시켰습니다.</li>
                     <li>2021년 ILO 핵심협약(87·98호) 비준으로, <span class="highlight-bold">'국제기준'</span>에 맞춰 노동3권 보장을 강화할 필요가 있습니다.</li>
                 </ul>
-                <div class="ilo-info" style="background:#f8f8f8; border-left:4px solid #EE7A00; padding:8px 15px; margin-top:10px; font-size:0.9em;">
-                    <b>ILO 87호(결사의 자유 및 단결권 보호 협약)</b><br>
-                    - 노동자와 사용자가 자유롭게 노동조합 등 단체를 결성하고 가입할 권리를 보장<br>
-                    - 정부나 사용자로부터 간섭받지 않고 자주적으로 활동할 수 있도록 보호<br>
-                </div>
-                <div class="ilo-info" style="background:#f8f8f8; border-left:4px solid #EE7A00; padding:8px 15px; margin-top:10px; font-size:0.9em;"> 
-                    <b>ILO 98호(단결권 및 단체교섭권 협약)</b><br>
-                    - 노동자가 단체교섭을 통해 근로조건을 결정할 권리를 보장<br>
-                    - 노동조합 가입이나 활동을 이유로 불이익을 주는 것을 금지<br>
+                <div class="accordion">
+                    <button class="accordion-btn">ILO 87호·98호 협약 설명 보기</button>
+                    <div class="accordion-panel">
+                        <b>ILO 87호(결사의 자유 및 단결권 보호 협약)</b><br>
+                        - 노동자와 사용자가 자유롭게 노동조합 등 단체를 결성하고 가입할 권리를 보장<br>
+                        - 정부나 사용자로부터 간섭받지 않고 자주적으로 활동할 수 있도록 보호<br>
+                        <br>
+                        <b>ILO 98호(단결권 및 단체교섭권 협약)</b><br>
+                        - 노동자가 단체교섭을 통해 근로조건을 결정할 권리를 보장<br>
+                        - 노동조합 가입이나 활동을 이유로 불이익을 주는 것을 금지<br>
+                    </div>
                 </div>
             </section>
 
@@ -252,5 +288,19 @@
             <img src="logo.png" alt="logo" style="height:81px; width:auto; display:block; margin:0 auto;">
         </footer>
     </div>
+    <script>
+document.querySelectorAll('.accordion-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        const panel = btn.nextElementSibling;
+        btn.classList.toggle('active');
+        panel.classList.toggle('open');
+        if (panel.classList.contains('open')) {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        } else {
+            panel.style.maxHeight = null;
+        }
+    });
+});
+</script>
 </body>
 </html>
