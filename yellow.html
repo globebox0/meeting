@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노란봉투법, 이것만은 알자!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light grey background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for the whole page content */
+        .container {
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0; /* Match body background for consistency */
+        }
+
+        /* Header Section */
+        .header {
+            background-color: #eab308; /* Yellow background */
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            box-sizing: border-box;
+        }
+
+        /* Main Content Area */
+        .content-section {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        /* Headings within sections */
+        .content-section h2 {
+            color: #EE7A00; /* Orange color for headings */
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .content-section h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Paragraphs */
+        .content-section p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        /* Lists */
+        .content-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .content-section li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
+        /* Specific text highlights */
+        .highlight-bold {
+            font-weight: 700;
+        }
+
+        .highlight-orange {
+            color: #EE7A00;
+            font-weight: 700;
+        }
+
+        /* 카드형 레이아웃 및 아이콘 스타일 추가 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .info-card {
+            background: #fffbe6;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+            padding: 25px 20px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-height: 200px;
+        }
+        .info-card .icon {
+            font-size: 1.8em;
+            margin-right: 2px;
+        }
+        .info-card .card-icon-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .info-card .icon-subtitle {
+            font-weight: 700;
+            font-size: 1.12em;
+            color: #EE7A00;
+            letter-spacing: -0.5px;
+        }
+        .info-card .card-title {
+            font-weight: 700;
+            font-size: 1.18em;
+            margin-bottom: 10px;
+            color: #222;
+        }
+        .info-card .card-desc {
+            font-size: 0.98em;
+            color: #444;
+            line-height: 1.6;
+        }
+        @media (max-width: 700px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .footer-message {
+            background-color: #fff; /* Yellow background */
+            color: #333;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: -1px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            노란봉투법, 이것만은 알자!
+        </header>
+
+        <main style="padding: 25px;">
+            <!-- Section 1: 노란봉투법이란? -->
+            <section class="content-section">
+                <h2>노란봉투법이란?</h2>
+                <p>정식 명칭은 <span class="highlight-bold">'노동조합 및 노동관계조정법 제2·3조 개정안'</span>입니다. 2014년 쌍용차 파업 노동자에 대한 <span class="highlight-orange">47억 원 손해배상</span> 판결을 계기로 시민들이 노란 월급봉투에 성금을 담아 연대한 것이 이름의 시작이죠.</p>
+            </section>
+
+            <!-- Section 2: 핵심 변화 4가지 -->
+            <section class="content-section">
+                <h2>핵심 변화 4가지</h2>
+                <div class="card-grid">
+                    <div class="info-card">
+                        <div class="card-icon-group">
+                            <span class="icon">🧑‍💼</span>
+                            <span class="icon-subtitle">사용자 범위 확대</span>
+                        </div>
+                        <div class="card-title">진짜 사장님과 대화할래요</div>
+                        <div class="card-desc">이제 우리 일에 실질적으로 영향력을 행사하는 원청도 '사용자'로 인정돼요. 덕분에 하청, 특수고용 노동자도 원청과 직접 단체교섭을 할 수 있는 길이 열렸습니다!</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon-group">
+                            <span class="icon">🗣️</span>
+                            <span class="icon-subtitle">노동쟁의 범위 확대</span>
+                        </div>
+                        <div class="card-title">더 폭넓은 문제로 싸울 수 있어요</div>
+                        <div class="card-desc">임금, 근로시간뿐만 아니라 부당노동행위나 단체협약 불이행 같은 문제로도 합법적인 쟁의행위가 가능해집니다. 우리의 권리를 침해하는 더 많은 문제에 맞설 수 있게 된 거죠.</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon-group">
+                            <span class="icon">🛡️</span>
+                            <span class="icon-subtitle">책임 개별화</span>
+                        </div>
+                        <div class="card-title">손해배상, 억울하지 않게</div>
+                        <div class="card-desc">쟁의행위로 손해배상 책임을 지게 되더라도, 법원이 각자의 책임과 기여도를 따져서 개별적으로 배상액을 정하게 됩니다. 조합원 개인이 과도한 빚을 지는 것을 막아줍니다.</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon-group">
+                            <span class="icon">💛</span>
+                            <span class="icon-subtitle">신원보증인 면책</span>
+                        </div>
+                        <div class="card-title">가족은 건드리지 마세요!</div>
+                        <div class="card-desc">노동조합 활동으로 발생한 손해에 대해 신원보증인이 책임을 지지 않도록 보호합니다. 더 이상 가족이나 지인이 피해를 볼까 걱정하지 않아도 됩니다.</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: 왜 필요한가요? -->
+            <section class="content-section">
+                <h2>왜 필요한가요?</h2>
+                <ul>
+                    <li>하청노동자·특수고용노동자는 그동안 <span class="highlight-bold">'진짜 사장'</span>과 교섭할 길이 막혀 있었습니다.</li>
+                    <li>파업 뒤 원청에게 수십~수백억 원을 청구하는 <span class="highlight-bold">'손배·가압류'</span>는 단체행동권을 위축시켰습니다.</li>
+                    <li>2021년 ILO 핵심협약(87·98호) 비준으로, <span class="highlight-bold">'국제기준'</span>에 맞춰 노동3권 보장을 강화할 필요가 있습니다.</li>
+                </ul>
+                <div class="ilo-info" style="background:#f8f8f8; border-left:4px solid #EE7A00; padding:8px 15px; margin-top:10px; font-size:0.9em;">
+                    <b>ILO 87호(결사의 자유 및 단결권 보호 협약)</b><br>
+                    - 노동자와 사용자가 자유롭게 노동조합 등 단체를 결성하고 가입할 권리를 보장<br>
+                    - 정부나 사용자로부터 간섭받지 않고 자주적으로 활동할 수 있도록 보호<br>
+                </div>
+                <div class="ilo-info" style="background:#f8f8f8; border-left:4px solid #EE7A00; padding:8px 15px; margin-top:10px; font-size:0.9em;"> 
+                    <b>ILO 98호(단결권 및 단체교섭권 협약)</b><br>
+                    - 노동자가 단체교섭을 통해 근로조건을 결정할 권리를 보장<br>
+                    - 노동조합 가입이나 활동을 이유로 불이익을 주는 것을 금지<br>
+                </div>
+            </section>
+
+            <!-- Section 4: 실제 사례로 이해하기 -->
+            <section class="content-section">
+                <h2>실제 사례로 이해하기</h2>
+                <h3>대우조선 하청노동자 파업(2022)</h3>
+                <p>51일 파업 후 원청은 간부 5명에게 <span class="highlight-orange">470억 원</span> 손해배상 소송을 제기했습니다. 개정안이 통과되면 개인별 행위・기여도에 따라 책임이 조정됩니다.</p>
+                <h3>택배노조 vs CJ대한통운</h3>
+                <p>원청이 교섭을 거부하며 발생한 갈등도, '실질적 사용자' 조항이 생기면 직접 교섭으로 해결 가능성이 열립니다.</p>
+            </section>
+
+            <!-- Section 5: 우리에게 주는 의미 -->
+            <section class="content-section">
+                <h2>우리에게 주는 의미</h2>
+                <h3>우정사업본부와 직접 교섭</h3>
+                <p>물류지원단의 교섭대표노조가 우정사업본부와 직접 교섭할 수 있게 됩니다. 이에 따라, 직원 휴게실이나 노조 사무실, 사업장 냉난방 등 기존에 우정사업본부의 관리권에 속해 논의가 어려웠던 근로조건들도 이제는 직접 교섭을 통해 개선할 수 있습니다.</p>
+            </section>
+
+            <!-- Section 6: 함께 기억 -->
+            <section class="content-section" style="background-color: #fffbeb;">
+                <h2>함께 기억해요!</h2>
+            <p>2014년, 한 시민이 월급봉투에 넣어 보낸 <span class="highlight-orange">4만 7천 원</span>이 사회적 연대의 씨앗이었습니다. 노란봉투법은 그 따뜻한 마음을 법으로 옮겨, '쟁의행위는 죄'라는 낙인을 지우고 더 <span class="highlight-bold">공정한 노사 관계</span>로 나아가자는 약속입니다.</p>
+            </section>
+        </main>
+        <footer class="footer-message">
+            <img src="logo.png" alt="logo" style="height:81px; width:auto; display:block; margin:0 auto;">
+        </footer>
+    </div>
+</body>
+</html>
