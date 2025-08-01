@@ -34,7 +34,60 @@
         .legal-basis strong { color: #b45309; }
         .final-message { background-color: #fffbeb; padding: 40px 20px; }
         .final-message p { font-size: 1.2em; font-weight: 500; color: #b45309; margin: 0; }
-        @media (max-width: 700px) { .card-grid { grid-template-columns: 1fr; } .header h1 { font-size: 1.8em; } }
+        @media (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0 4vw;
+    box-shadow: none;
+  }
+  .header {
+    padding: 25px 5px;
+  }
+  .header h1 {
+    font-size: 1.3em;
+  }
+  main {
+    padding: 10px 0;
+  }
+  .content-section {
+    padding: 14px 5px;
+    margin-bottom: 14px;
+  }
+  .content-section h2 {
+    font-size: 1.1em;
+    padding-bottom: 6px;
+    margin-bottom: 9px;
+  }
+  .content-section h3 {
+    font-size: 1em;
+    margin-top: 16px;
+    margin-bottom: 9px;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 2px;
+  }
+  .info-card {
+    padding: 11px;
+    font-size: 0.96em;
+  }
+  .info-card .card-title {
+    font-size: 1.08em;
+  }
+  .accordion-btn {
+    font-size: 0.98em;
+    padding: 11px 7px;
+  }
+  .accordion-panel {
+    padding: 0 6px;
+  }
+  .final-message {
+    padding: 14px 5px;
+  }
+  .footer-message img {
+    height: 52px !important;
     </style>
 </head>
 <body>
